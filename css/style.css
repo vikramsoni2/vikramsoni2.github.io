@@ -154,7 +154,7 @@ body {
   opacity: 0;
 }
 .logo{
-  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 150ms forwards;
+  animation: appear 1200ms cubic-bezier(.57,.16,.87,.49) 150ms forwards;
 }
 .title{
   animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 300ms forwards;
