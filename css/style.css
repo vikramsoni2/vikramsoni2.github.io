@@ -95,7 +95,7 @@ body {
   .container { min-height: 100vh;}
   .logo, .title, .nav{margin-top: auto;}
   .intro {max-width: 320px; text-align: center; margin: 10px auto 20px;}
-  .nav {order: 1;}
+  .nav {order: 1; margin-bottom: 20px;}
 }
 /* DESKTOP ONLY */
 
