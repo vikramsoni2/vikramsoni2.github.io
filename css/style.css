@@ -22,31 +22,35 @@
   --primary: var(--clr-primary-dark);
 }
 
+/* typography */
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
 p {
   font-size: 1.2rem;
   line-height: 1.5em;
   font-weight: 300;
 }
+/* layout for mobile first */
 
 body {
   color: var(--foreground);
   background-color: var(--background);
-  max-width: 620px;
-  min-height: 100vh;
+  /* max-width: 321px; */
+  /* min-height: 100vh;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.container {
+  padding: 0 20px;
+  display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -54,35 +58,6 @@ body {
 .logo img {
   display: block;
   width: 200px;
-  border-radius: 10px;
-}
-
-.logo {
-  grid-area: logo;
-}
-
-.title {
-  grid-area: title;
-}
-
-.intro {
-  grid-area: intro;
-}
-
-.nav {
-  grid-area: nav;
-}
-
-.social {
-  grid-area: social;
-}
-
-.container {
-  display: grid;
-  gap: 10px 15px;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "social logo title " "social logo intro " "social logo nav";
 }
 
 .nav {
@@ -92,27 +67,105 @@ body {
 .nav__item {
   padding: 10px 20px;
   margin-right: 10px;
-  border-radius: 10px;
+  position: relative;
   background-color: var(--bg-secondary-dark);
   transition: background-color 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
-.nav__item:hover {
+.nav__item:hover{
   background-color: var(--bg-third-dark);
 }
 
 .social {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   font-size: 1.8rem;
-  margin: auto;
 }
-
 .social i {
-  margin: 4px 0;
+  margin: 5px;
   filter: brightness(75%);
   transition: filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 .social i:hover {
   filter: brightness(100%);
 }
+
+/* MOBILE ONLY */
+
+@media (max-width:619px){
+  .container { min-height: 100vh;}
+  .logo, .title, .nav{margin-top: auto;}
+  .intro {max-width: 320px; text-align: center; margin: 10px auto 20px;}
+  .nav {order: 1;}
+}
+/* DESKTOP ONLY */
+
+@media (min-width:620px){
+  body {
+    max-width: 620px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {grid-area: logo;}
+  .title {grid-area: title;}
+  .intro {grid-area: intro;}
+  .nav {grid-area: nav;}
+  .social {grid-area: social;}
+
+  .container {
+    display: grid;
+    padding: 0;
+    gap: 10px 15px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "social logo title " 
+    "social logo intro " 
+    "social logo nav";
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: auto;
+  }
+  .social i {
+    margin: 4px 0;
+  }
+  .nav {
+    order: 0;
+  }
+}
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+.logo, .title, .intro, .nav, .social{
+  opacity: 0;
+}
+.logo{
+  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 150ms forwards;
+}
+.title{
+  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 300ms forwards;
+}
+.intro{
+  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 500ms forwards;
+}
+.nav{
+  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 800ms forwards;
+}
+.social{
+  animation: appear 500ms cubic-bezier(.57,.16,.87,.49) 900ms forwards;
+}
+
