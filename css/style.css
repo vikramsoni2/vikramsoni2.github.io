@@ -1,43 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&family=Playfair+Display:wght@700&display=swap");
-
 *, *::before, *::after {
   box-sizing: border-box;
-  margin:0;
+  margin: 0;
   padding: 0;
-  
 }
+
 :root {
   font: 16px "Source Sans Pro", sans-serif;
   --clr-light: #293448;
   --bg-light: #FFF;
   --accent-light:red;
   --clr-primary-light:#192438;
-
   --clr-dark: #dcdcdc;
-  --bg-dark: #222831; 
+  --bg-dark: #222831;
   --accent-dark:#fff;
   --bg-secondary-dark:#333c4a;
   --bg-third-dark:#445163;
-
   --foreground: var(--clr-dark);
   --background: var(--bg-dark);
   --accent: var(--accent-dark);
   --primary: var(--clr-primary-dark);
 }
 
-h1, h2, h3 {font-family: 'Playfair Display', serif;}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
 
-h1{font-size:3rem;}
-h2{font-size:2rem;}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 p {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   line-height: 1.5em;
   font-weight: 300;
 }
-body{
+
+body {
   color: var(--foreground);
   background-color: var(--background);
-  max-width:620px;
+  max-width: 620px;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -45,57 +51,68 @@ body{
   justify-content: center;
 }
 
-.logo img{
-  display:block; 
+.logo img {
+  display: block;
   width: 200px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
+.logo {
+  grid-area: logo;
+}
 
-.logo {grid-area:logo;}
-.title {grid-area:title;}
-.intro {grid-area:intro;}
-.nav {grid-area:nav;}
-.social {grid-area:social;}
+.title {
+  grid-area: title;
+}
 
-.container{
-  display:grid;
-  gap:10px 15px;
+.intro {
+  grid-area: intro;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.social {
+  grid-area: social;
+}
+
+.container {
+  display: grid;
+  gap: 10px 15px;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-  "social logo title "
-  "social logo intro "
-  "social logo nav"
+  grid-template-areas: "social logo title " "social logo intro " "social logo nav";
 }
 
-.nav{
-  display:flex;
+.nav {
+  display: flex;
   align-items: center;
-  &__item{
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius:10px;
-    background-color: var(--bg-secondary-dark);
-    transition: background-color 200ms cubic-bezier(.65,.05,.36,1);
-  }
-  &__item:hover{
-    background-color: var(--bg-third-dark);
-  }
 }
-.social{
-  display:flex;
-  flex-direction:column;
+.nav__item {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: var(--bg-secondary-dark);
+  transition: background-color 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.nav__item:hover {
+  background-color: var(--bg-third-dark);
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   font-size: 1.8rem;
   margin: auto;
 }
-.social i {
-  margin:4px 0;
-  filter: brightness(75%);
-  transition: filter 200ms cubic-bezier(.65,.05,.36,1);
-  &:hover{
-    filter: brightness(100%);
-  }
-}
 
+.social i {
+  margin: 4px 0;
+  filter: brightness(75%);
+  transition: filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.social i:hover {
+  filter: brightness(100%);
+}
