@@ -13,7 +13,7 @@ body {
 }
 
 :root {
-  font-family: 16px "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1, h2, h3 {
@@ -28,7 +28,7 @@ h2 {
   font-size: 2rem;
 }
 
-p {
+p, li {
   font-size: 1.2rem;
   line-height: 1.5em;
   font-weight: 300;
@@ -195,7 +195,7 @@ a {
         grid-template-columns: repeat(3, auto);
     -ms-grid-rows: auto 1fr auto;
         grid-template-rows: auto 1fr auto;
-        grid-template-areas: "social logo person "  "social logo intro "  "social logo nav";
+        grid-template-areas: "social logo person "  "social logo intro "  "social logo nav";
   }
   .social {
     -webkit-box-orient: vertical;
@@ -324,17 +324,52 @@ a {
 
 /* blog */
 .header {
-  text-align: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid red;
+  padding: 0.8em 0;
+  margin-bottom: 1em;
 }
 
 .header__title {
   font-weight: 600;
-  margin-bottom: 1em;
+}
+
+.header i {
+  font-size: 2rem;
 }
 
 pre {
   padding: 20px;
   background-color: #333c4a;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  line-height: 1.7em;
+}
+
+.url {
+  border-bottom: 1px dashed #dcdcdc;
+}
+
+.url:hover {
+  color: #fff;
 }
 
 /* image gallery */
