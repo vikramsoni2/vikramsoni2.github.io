@@ -1,0 +1,38 @@
+/* blog */
+
+.header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+  display: flex;
+  border-bottom: 1px solid $accent-light;
+  padding: 0.8em 0;
+  margin-bottom: 1em;
+
+  &__title {font-weight: 600}
+  i {font-size: 2rem} 
+}
+  
+pre {
+  padding: 20px;
+  background-color: $bg-secondary-dark;
+}
+
+p{
+  margin-bottom: 1em; 
+}
+
+ul{
+  list-style-position: inside;
+
+  li {
+    line-height: 1.7em;
+  }
+}
+
+.url {
+  border-bottom: 1px dashed $clr-dark;
+}
+.url:hover {
+  color: #fff;
+}
