@@ -33,14 +33,14 @@
   }
 }
 
-.logo, .title, .intro, .nav, .social{
+.logo, .person, .intro, .nav, .social{
   position: relative;
   opacity: 0;
 }
 .logo{
   animation: appear-left 1200ms 150ms forwards;
 }
-.title{
+.person{
   animation: appear-bottom 500ms 300ms forwards;
 }
 .intro{
@@ -60,7 +60,7 @@
   .social{
     animation-name: appear;
   }
-  .title{
+  .person{
     animation-name: appear;
   }
 }
