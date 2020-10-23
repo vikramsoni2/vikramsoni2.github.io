@@ -1,0 +1,15 @@
+/* blog */
+
+.header {
+    text-align: center;
+    &__title {
+      font-weight: 600;
+      margin-bottom: 1em;
+    }
+  
+  }
+  
+  pre {
+    padding: 20px;
+    background-color: $bg-secondary-dark;
+  }

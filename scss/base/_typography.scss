@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: $base-font;
+}
+
+h1, h2, h3 {
+  font-family: $head-font;
+}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
+p {
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+a {
+  cursor: pointer;
+  text-decoration: none; 
+  color: $clr-dark;
+}
