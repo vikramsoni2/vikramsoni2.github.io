@@ -1,14 +1,14 @@
-@import 'base/variables';
+@import 'themes/default-dark';
 @import 'base/globals';
 @import 'base/typography';
 
-@import 'home/main';
-@import 'home/responsive';
-@import "home/anim";
+@import 'layouts/home/main';
+@import 'layouts/home/responsive';
+@import "layouts/home/anim";
 
-@import 'articles/main';
-@import 'gallery/main';
-
+@import 'layouts/articles/main';
+@import 'layouts/gallery/main';
+@import 'layouts/about/main';
 
 
 

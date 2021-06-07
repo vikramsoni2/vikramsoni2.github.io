@@ -1,5 +1,4 @@
 
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +6,6 @@
 }
 
 body {
-    color: $clr-dark;
-    background-color: $bg-dark;
-  }
+    color: $clr;
+    background-color: $bg;
+}

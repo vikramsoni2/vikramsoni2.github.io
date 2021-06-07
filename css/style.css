@@ -37,10 +37,10 @@ p, li {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: #dcdcdc;
+  color: inherit;
 }
 
-.container {
+.home {
   padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,25 +52,22 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.home {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.logo img {
+.home .logo img {
   display: block;
   width: 200px;
   border-radius: 5px;
 }
 
-.person {
+.home .person {
   font-weight: 700;
 }
 
-.nav {
+.home .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +76,7 @@ a {
           align-items: center;
 }
 
-.nav__item {
+.home .nav__item {
   border-radius: 5px;
   padding: 8px 20px;
   margin-right: 10px;
@@ -89,11 +86,11 @@ a {
   transition: background-color 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-.nav__item:hover {
+.home .nav__item:hover {
   background-color: #445163;
 }
 
-.social {
+.home .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,40 +104,41 @@ a {
   font-size: 1.8rem;
 }
 
-.social a {
-  -webkit-filter: brightness(75%);
-          filter: brightness(75%);
-  -webkit-transition: -webkit-filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: -webkit-filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  transition: filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1), -webkit-filter 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+.home .social a {
+  -webkit-transition: color 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: color 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
+  color: inherit;
 }
 
-.social a:hover {
+.home .social a:hover {
+  color: #fff;
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
 }
 
 /* MOBILE ONLY */
 @media (max-width: 619px) {
-  .container {
+  .home {
     min-height: 100vh;
   }
-  .logo, .person, .nav {
+  .home .logo,
+  .home .person,
+  .home .social {
     margin-top: auto;
   }
-  .intro {
+  .home .intro {
     max-width: 320px;
     text-align: center;
     margin: 10px auto 20px;
   }
-  .nav {
+  .home .nav {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
-  .social a {
+  .home .social a {
     margin: 5px;
   }
 }
@@ -197,16 +195,16 @@ a {
         grid-template-columns: repeat(3, auto);
     -ms-grid-rows: auto 1fr auto;
         grid-template-rows: auto 1fr auto;
-        grid-template-areas: "social logo person "  "social logo intro "  "social logo nav";
+        grid-template-areas: "social logo person " "social logo intro " "social logo nav";
   }
-  .social {
+  .home .social {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: auto;
   }
-  .nav {
+  .home .nav {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
