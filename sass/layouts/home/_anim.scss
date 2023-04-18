@@ -1,0 +1,66 @@
+/* ANIMATIONS */
+
+@keyframes appear {
+  from {
+    top:20px;
+    opacity: 0;
+  }
+  to {
+    top:0;
+    opacity: 1;
+  }
+}
+
+@keyframes appear-bottom {
+  from {
+    bottom:20px;
+    opacity: 0;
+  }
+  to {
+    bottom:0;
+    opacity: 1;
+  }
+}
+
+@keyframes appear-left {
+  from {
+    right:20px;
+    opacity: 0;
+  }
+  to {
+    right:0;
+    opacity: 1;
+  }
+}
+
+.logo, .person, .intro, .nav, .social{
+  position: relative;
+  opacity: 0;
+}
+.logo{
+  animation: appear-left 1200ms 150ms forwards;
+}
+.person{
+  animation: appear-bottom 500ms 300ms forwards;
+}
+.intro{
+  animation: appear 500ms 500ms forwards;
+}
+.nav{
+  animation: appear 500ms 700ms forwards;
+}
+.social{
+  animation: appear-left 500ms 600ms forwards;
+}
+
+@media (max-width:619px){
+  .logo{
+    animation-name: appear-bottom;
+  }
+  .social{
+    animation-name: appear;
+  }
+  .person{
+    animation-name: appear;
+  }
+}

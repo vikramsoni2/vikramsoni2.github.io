@@ -1,0 +1,22 @@
+
+:root {
+  font-family: $base-font;
+}
+
+h1, h2, h3 {
+  font-family: $head-font;
+}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
+
+p, li {
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+a {
+  cursor: pointer;
+  text-decoration: none; 
+  color: inherit;
+}

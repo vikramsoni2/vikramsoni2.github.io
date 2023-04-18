@@ -1,0 +1,21 @@
+// .container {
+//   padding:0;
+// }
+// .container > * {
+//   padding: 20px;
+// }
+// section {
+//   transform: skew(0, -3deg) translateY(calc(50vw/-7));
+//   & > *{ 
+//     transform: skew(0, 3deg) translateY(calc(50vw/7));
+//   }
+// }
+// section:nth-child(even){
+//   background-color: #48515f;
+// }
+// section:nth-child(odd) {
+//   transform: skew(0, 4.76deg) translateY(calc(50vw/12));
+//   // & > *{ 
+//   //   transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+//   // }
+// }
