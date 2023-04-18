@@ -1,0 +1,20 @@
+{
+    "name": "vsoni.com",
+    "version": "1.0.0",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "description": "",
+    "scripts": {
+        "start": "parcel src/index.html --open",
+        "clean": "rm -rf dist/*",
+        "build:parcel": "parcel build src/index.html --no-content-hash --no-source-maps --public-url ./",
+        "build": "npm run build:parcel"
+    },
+    "keywords": [],
+    "author": "Vikram Soni",
+    "license": "MIT",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.0.0",
+        "parcel": "latest",
+        "posthtml-include": "^1.7.2"
+    }
+}

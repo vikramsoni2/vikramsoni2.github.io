@@ -3,6 +3,7 @@
 @media (max-width: 619px) {
   .home {
     min-height: 100vh;
+
     .logo,
     .person,
     .social 
@@ -17,7 +18,7 @@
     .nav {
       order: 1;
       margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: auto;
     }
     .social a {
       margin: 5px;
