@@ -1,5 +1,6 @@
 {
   "name": "vikramsoni2-github-io",
+  "packageManager": "pnpm@8.6.0",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
